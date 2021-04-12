@@ -2,11 +2,20 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Web Template</title>
+		<title>Turf Builder</title>
 		<!-- link to reset first-->
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
-
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css" /><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
 		<!-- Content Goes Here -->
@@ -14,20 +23,22 @@
 		<!-- container start -->
 		<div id="container">
 			<!-- main header start-->
-			<header id="mainHeader">
-				<img src="images/logo.jpg" alt="logoHeader" id="logo">
+			<header id="mainHeader" class="gridCon">
 				<nav id="mainNav">
 					<h2 class="hidden">Main Navigation</h2>
-					<form id="searchForm">
-						<input type="text" placeholder="">
-					</form>
-					<ul>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-					</ul>
+					<button id="button"></button>
+					<div id="burgerCon">
+						<ul id="burgerMenu">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="product.html">Product</a></li>
+						</ul>
+					</div>
 				</nav>
+				<div id="logoCon">
+					<img src="images/logo.svg" alt="Turf Builder Logo" id="logoTurf">
+				</div>	
 			</header>
 			<!-- main header end-->
 			<!-- heroImg start -->
@@ -35,7 +46,7 @@
 			<h2 class="hidden">Hero Image</h2>
 			<img src="images/hero.jpg" alt="Hero Image" >
 			<div id="hero_button">
-				<button></button>
+				<button>HOT DEAL</button>
 			</div>
 	  </section>
 		<!-- heroImg end -->
@@ -64,22 +75,15 @@
 			<!-- products end -->
 		</main>
 		<!-- footer start-->
-		<footer id="footer">
-			<h2 class="hidden">Footer</h2>
-			<img src="images/logoFooter.jpg" alt="logoFooter" id="logoFooter">
-			<nav id="footerNav">
-				<h2 class="hidden">Footer Nav</h2>
-				<section class="SocialMedia">
-
-				</section>
-				<ul>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-				</ul>
-			</nav>
-		</footer >
+		<footer id="mainFooter">
+			<section>
+				<h2>CONTACT INFORMATION</h2>
+				<div id="address">
+					<p><img src="images/location-icon.svg" alt="address icon">700 King Street London ON</p>
+					<p><img src="images/phone-icon.svg" alt="phone icon"><a href="tel:226-504-4444">(226)-504-4444</a>
+				</div>
+			</section>
+		</footer>
 		<!-- footer end -->
 		</div>
 		<script src="js/main.js"></script>
