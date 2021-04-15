@@ -146,13 +146,32 @@ a{
 	border: 1px solid #ced4da;
   border-radius: .25rem;
 	max-width: 400px;
-	margin: 20px auto;
+	margin: 50px 20px;
 }
 .content{
 	padding: 10px;
 }
-.content > h2{
-	font-weight: bold;
+.content h2 {
+	font-weight: 700;
+}
+
+.content h3{
+	margin-top: 20px;
+	font-weight: 600;
+	line-height: 15px;
+}
+
+.content p{
+	line-height: 20px;
+}
+
+.content li{
+	margin-top: 7px;
+	line-height: 25px;
+}
+
+#pale, #wheat, #ginger{
+	display: none;
 }
 /* footer */
 #mainFooter{
@@ -160,7 +179,7 @@ a{
 	background-color: #87E293;
 	padding-top: 10px;
 	margin-top: 20px;
-	width: 1366px;
+
 }
 
 #mainFooter img{
@@ -181,7 +200,7 @@ a{
 #contactForm{
 	width: 60%;
 	position: relative;
-	background: #AFEAAA;
+	background: #6BCAE2;
 }
 
 #contactForm input{
@@ -231,9 +250,9 @@ form input{
 		width: 90%;
 		display: flex;
 		align-content: center;
-		-webkit-box-orient: vertical!important;
-		-webkit-box-direction: normal!important;
-		-ms-flex-direction: column!important;
+		/* -webkit-box-orient: vertical!important; */
+		/* -webkit-box-direction: normal!important; */
+		/* -ms-flex-direction: column!important; */
 		flex-direction: column!important;
 	}
 	#map iframe{
@@ -286,12 +305,21 @@ form input{
 	#burgerCon{
 		margin-bottom: 40px;
 	}
+	#burgerMenu{
+		margin-right: 70px;
+	}
+
 	#button{
 		display: none;
 	}
 
 	#mainNav li:first-child {
 		border-top: none;
+	}
+
+	#pale, #wheat, #ginger{
+		display: block;
+		flex-direction: row;
 	}
 	@media screen and (min-width: 200px),
 				 screen and (min-resolution: 1.25dppx){
@@ -300,4 +328,26 @@ form input{
 						 background-image: url(../images/hero@2x.jpg);
 					 }
 				 }
+}
+
+/* product page */
+#videoFrame{
+	margin: 0 50px;
+}
+
+#productDetail p{
+	margin: 20px 20px;
+	line-height: 20px;
+	font-family: Times, Arial, sans-serif;
+	font-weight: 500;
+}
+
+@media screen and (min-width: 500px) {
+	#videoFrame video{
+		height: 500px;
+		display: block;
+	}
+	#productDetail p{
+		display: flex;
+	}
 }
