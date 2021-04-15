@@ -28,7 +28,7 @@ a{
 }
 .container
 {
-	max-width: 1366px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -96,12 +96,21 @@ a{
 /* hero image */
 #heroImg
 {
-	background-position: center;
+	background-image: url(../images/hero.jpg);
   background-repeat: no-repeat;
+	background-position: center;
   background-size: cover;
   position: relative;
-	height: 400px;
+	opacity: 0.5;
+	height: 200px;
 }
+
+@media screen and (min-width: 200px),
+			 screen and (min-resolution: 1.25dppx){
+				 #heroImg{
+					 background-image: url(../images/hero@2x.jpg);
+				 }
+			 }
 
 #hero_button
 {
@@ -113,74 +122,45 @@ a{
   color: white;
 }
 
-/* divider */
-.divider
-{
-	margin: 0 auto;
-	width: 900px;
-	padding-top: 30px;
-	border-bottom: solid black 2px;
-}
-
 /* product section */
-#product
-{
-	justify-content: space-around;
-	margin-top: 50px;
+@media screen and (max-width: 500px){
+	.product{
+		display: flex;
+		align-items: center;
+		-webkit-box-orient: vertical!important;
+		-webkit-box-direction: normal!important;
+		-ms-flex-direction: column!important;
+		flex-direction: column!important;
+	}
+	.productCon{
+		max-width: 200px;
+		margin: 20px auto;
+	}
+}
+.product{
 	display: flex;
-	flex-direction: row;
-	margin-left: 30px;
-	margin-right: 30px;
-	height: 1200px;
-	background-color: #696969;
+	justify-content: center;
 }
 
-#product1
-{
-	margin-top: 120px;
-	background : #DCFF8B;
-	display: flex;
-	width: 300px;
-	height: 300px;
-	flex-wrap: wrap;
+.productCon{
+	border: 1px solid #ced4da;
+  border-radius: .25rem;
+	max-width: 400px;
+	margin: 20px auto;
 }
-
-#product2
-{
-	margin-top: 250px;
-	background : #DCFF8B;
-	display: flex;
-	width: 300px;
-	height: 300px;
-	flex-wrap: wrap;
+.content{
+	padding: 10px;
 }
-
-#product3
-{
-	margin-top: 120px;
-	background : #DCFF8B;
-	display: flex;
-	width: 300px;
-	height: 300px;
-	flex-wrap: wrap;
+.content > h2{
+	font-weight: bold;
 }
-
-#product4
-{
-	margin-top: 250px;
-	background : #DCFF8B;
-	display: flex;
-	width: 300px;
-	height: 300px;
-	flex-wrap: wrap;
-}
-
 /* footer */
 #mainFooter{
 	height: 120px;
-	background-color: #87E293; 
+	background-color: #87E293;
 	padding-top: 10px;
 	margin-top: 20px;
+	width: 1366px;
 }
 
 #mainFooter img{
@@ -196,29 +176,12 @@ a{
 	margin: 0 auto;
 }
 
-#productImg
-{
-	margin: 0 auto;
-	margin-top: 50px;
-	background:#DCFF8B;
-	width: 900px;
-	height: 500px;
-}
 
 /* contact page */
 #contactForm{
 	width: 60%;
 	position: relative;
-	margin: 0 auto;
 	background: #AFEAAA;
-}
-
-@media screen and (min-width: 400px){
-	#contactForm{
-		width: 40%;
-		position: relative;
-		margin: 0 auto;
-	}
 }
 
 #contactForm input{
@@ -227,10 +190,114 @@ a{
 	border-radius: 6px;
 }
 
-#contactForm textarea{
-	margin-top: 15px;
-	width: 150px;
-	height: 50px;
+.form{
+	display: flex;
+	justify-content: center;
+	width: 90%;
+	margin: 0 auto;
+}
+form input{
+	width: 100%;
+	font-size: 20px;
+	line-height: 30px;
+	border: 1px solid #ced4da;
+  border-radius: .25rem;
+	margin: 10px auto;
+	height: 35px;
+}
+.text{
+	width: 90%;
+	margin: 10px auto;
+}
+.texta{
+		margin: 30px auto;
+		width: 90%;
+
+}
+.texta textarea{
+		width: 100%;
+}
+#map iframe{
+	display: block;
+	margin: 0 auto;
+}
+@media screen and (max-width: 500px){
+	#contactForm{
+		width: 100%;
+		position: relative;
+	}
+
+	.form{
+		width: 90%;
+		display: flex;
+		align-content: center;
+		-webkit-box-orient: vertical!important;
+		-webkit-box-direction: normal!important;
+		-ms-flex-direction: column!important;
+		flex-direction: column!important;
+	}
+	#map iframe{
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+	}
 }
 
+@media screen and (min-width: 768px){
+	.gridCon{
+		display: grid;
+		grid-template-columns: repeat(9, minmax(0,1fr));
+		grid-column-gap: 30px;
+	}
+	#logoCon{
+		order: -1;
+		grid-column: 1/3;
+		margin-top: 10px;
+	}
+	#logoTurf{
+		margin: 0;
+		display: inline;
+		max-width: 162px;
+	}
+	#burgerCon{
+		display: flex;
+		flex-direction: column;
+		margin: 50px 30px 0 0;
+	}
+	#mainNav{
+		grid-column: 4/-1;
+	}
+	#mainNav li{
+		border-bottom: none;
+		display: inline;
+		margin-left: 20px;
+	}
+	#mainNav li a{
+		display: inline;
+		background-color: #fff;
+		color: #6d6d6c;
+	}
+	#mainNav li a:hover{
+		color: #8fa771;
+		border-bottom: 3px solid #8fa771;
+		padding-bottom: 5px;
+		background-color: transparent;
+	}
+	#burgerCon{
+		margin-bottom: 40px;
+	}
+	#button{
+		display: none;
+	}
 
+	#mainNav li:first-child {
+		border-top: none;
+	}
+	@media screen and (min-width: 200px),
+				 screen and (min-resolution: 1.25dppx){
+					 #heroImg{
+						 height: 300px;
+						 background-image: url(../images/hero@2x.jpg);
+					 }
+				 }
+}
